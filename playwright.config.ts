@@ -5,6 +5,7 @@ export default defineConfig({
   testDir: './tests',
   globalSetup: require.resolve('./utils/global-setup'),
 
+  workers: process.env.CI ? 4 : 2,
   fullyParallel: true,
   retries,
 

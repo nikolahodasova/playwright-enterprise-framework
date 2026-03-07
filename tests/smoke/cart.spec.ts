@@ -1,7 +1,8 @@
 import { test } from '../../fixtures/all-fixtures';
 
 test.describe('@smoke Cart flow', () => {
-
+  test.describe.configure({ mode: 'parallel' });
+  
   test('User can add product to cart', async ({ 
     inventoryPage,
      cartPage,
