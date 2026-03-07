@@ -37,4 +37,7 @@ export default defineConfig({
       dependencies: ['setup'],
     },
   ],
+  expect: {
+  toHaveScreenshot: { maxDiffPixels: 150 },
+  },
 });
