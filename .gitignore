@@ -1,8 +1,22 @@
 
 # Playwright
 node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-/playwright/.auth/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+playwright/.auth/
+allure-report/
+allure-results/
+
+# Logs and debug
+npm-debug.log*
+yarn-debug-log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Authentication /Secrets
+storage/

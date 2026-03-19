@@ -8,31 +8,31 @@ This project demonstrates a scalable automation architecture used in modern QA t
 
 ## 🚀 Tech Stack
 
-* Playwright
-* TypeScript
-* Node.js
-* Allure Reporting
-* GitHub Actions CI
-* Docker
+*   **Playwright** (E2E Testing)
+*   **TypeScript** (Static Typing)
+*   **Node.js** (Runtime Environment)
+*   **Allure Reporting** (Advanced Reporting)
+*   **GitHub Actions** (CI pipeline)
+*   **Docker** (Environment Isolation)
 
 ---
 
 ## 🏗️ Framework Architecture
 
 ```
-tests/
-  smoke/
-  regression/
-  api/
-  visual/
-
-pages/
-fixtures/
-utils/
-test-data/
-config/
-storage/
+├── .github/workflows   # CI/CD pipeline (GitHub Actions)
+├── fixtures/           # Custom fixtures & dependency injection
+├── pages/              # Page Object Model (POM)
+├── storage/            # Authentication state & session storage
+├── tests/              # Test suites grouped by feature (auth, cart, inventory)
+├── utils/              # Helper functions and global hooks
+├── .gitignore          # Files and folders excluded from version control
+├── package-lock.json   # Locked versions of dependencies for reproducibility
+├── package.json        # Project dependencies and custom scripts
+├── playwright.config.ts # Global framework configuration
+└── Dockerfile          # Containerization for consistent test runs
 ```
+
 
 Architecture follows best practices used in enterprise automation frameworks:
 
@@ -50,7 +50,6 @@ This framework includes several types of automated tests:
 
 * **Smoke tests** – critical functionality checks
 * **Regression tests** – full functional coverage
-* **API tests** – backend endpoint validation
 * **Visual tests** – UI layout verification
 
 ---
@@ -59,20 +58,17 @@ This framework includes several types of automated tests:
 
 Clone repository:
 
-```
-git clone <repo-url>
+```bash
+git clone <>
 cd playwright-enterprise-framework
 ```
 
 Install dependencies:
-
-```
+```bash
 npm install
 ```
-
 Install browsers:
-
-```
+```bash
 npx playwright install
 ```
 
@@ -80,21 +76,19 @@ npx playwright install
 
 ## ▶️ Running Tests
 
-Run all tests:
+**Run all tests:**
 
-```
+```bash
 npx playwright test
 ```
+**Run smoke tests only:**
 
-Run smoke tests only:
-
-```
+```bash
 npx playwright test --grep @smoke
 ```
 
-Run visual tests:
-
-```
+**Run visual tests:**
+```bash
 npx playwright test --grep @visual
 ```
 
@@ -102,9 +96,8 @@ npx playwright test --grep @visual
 
 ## 📊 Reporting
 
-Generate Allure report:
-
-```
+**Generate Allure report:**
+```bash
 allure generate allure-results --clean
 allure open
 ```
@@ -130,7 +123,7 @@ CI includes:
 
 Framework can be executed inside Docker:
 
-```
+```bash
 docker build -t playwright-tests .
 docker run playwright-tests
 ```
@@ -151,5 +144,4 @@ docker run playwright-tests
 
 ## 👩‍💻 Author
 
-Nikola Hodásová
-QA Automation learning project focused on building a scalable Playwright framework architecture.
+**Nikola Hodásová** QA Automation Engineer (Junior), QA Automation Tester (Junior)
